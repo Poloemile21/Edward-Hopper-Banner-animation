@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edward Hopper Banner Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- INTRO ANIMATION COVER -->
+  <div id="intro-cover">
+    <svg id="square-anim" width="300" height="300" viewBox="0 0 300 300">
+      <rect x="0" y="0" width="300" height="300"
+            fill="none"
+            stroke="white"
+            stroke-width="10"
+            vector-effect="non-scaling-stroke" />
+
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+            font-family="Arial, sans-serif"
+            font-size="48"
+            fill="white">
+
+        <tspan x="50%" dy="-0.6em" opacity="0" font-style="italic">
+          Website
+          <animate attributeName="opacity" from="0" to="1" dur="2s" fill="freeze" />
+        </tspan>
+
+        <tspan x="50%" dy="1.2em" opacity="0" font-weight="bold">
+          Artists
+          <animate attributeName="opacity" from="0" to="1" dur="2s" begin="1s" fill="freeze" />
+        </tspan>
+
+      </text>
+    </svg>
+  </div>
+
+  <!-- TWO-LINE HEADER -->
+  <div id="hero-header">
+    <span class="line1">We Create</span>
+    <span class="line2">Your Website</span>
+  </div>
+
+  <!-- BUTTON UNDER HEADER -->
+  <div id="hero-button">
+    <button class="btn">
+      <svg>
+        <rect x="0" y="0" width="220" height="60"></rect>
+      </svg>
+      <span>Learn More</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* HERO WRAPPER */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* BLACK INTRO COVER */
+#intro-cover {
+  position: absolute;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 1.2s ease-in-out;
+}
+
+#intro-cover.reveal {
+  transform: translateY(100%);
+}
+
+/* TWO-LINE HEADER */
+#hero-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  z-index: 10;
+  text-align: center;
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+#hero-header.visible {
+  opacity: 1;
+}
+
+/* FIRST LINE */
+#hero-header .line1 {
+  font-family: "Arial", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+  display: block;
+}
+
+/* SECOND LINE */
+#hero-header .line2 {
+  font-family: "Georgia", serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: white;
+  display: block;
+}
+
+/* BUTTON CONTAINER */
+#hero-button {
+  position: absolute;
+  top: calc(50% + 120px);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+#hero-button.visible {
+  opacity: 1;
+}
+
+/* BUTTON STYLE */
+#hero-button .btn {
+  position: relative;
+  width: 220px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+/* SVG BORDER */
+#hero-button .btn svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 60px;
+  pointer-events: none;
+}
+
+#hero-button .btn svg rect {
+  fill: none;
+  stroke: white;
+  stroke-width: 3px;
+  rx: 20;
+  ry: 20;
+  stroke-dasharray: 560;
+  stroke-dashoffset: 560;
+  transition: stroke-dashoffset 1.4s ease;
+}
+
+#hero-button.visible .btn svg rect {
+  stroke-dashoffset: 0;
+}
+
+/* TEXT FADE-IN */
+#hero-button .btn span {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+#hero-button.visible .btn span {
+  opacity: 1;
+}
